@@ -1,0 +1,12 @@
+;FFMETADATA1
+title={{.Title}}
+artist={{.Artist}}
+genre={{.Genre}}
+
+{{ range .Chapters }}
+[CHAPTER]
+TIMEBASE=1/1000
+START={{.Start}}
+END={{ add .Start .Duration}}
+title={{.Title}}
+{{ end }}

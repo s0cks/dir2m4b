@@ -13,9 +13,6 @@ var RootCommand = &cobra.Command{
 		viper.AutomaticEnv()
 		viper.SetEnvKeyReplacer(strings.NewReplacer("-", "_", ".", "-"))
 		viper.SetEnvPrefix("DIR2M4B")
-		return nil
-	},
-	RunE: func(cmd *cobra.Command, args []string) error {
-		return nil
+		return viper.BindPFlags(cmd.Flags())
 	},
 }
