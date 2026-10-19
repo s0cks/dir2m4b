@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -21,15 +20,6 @@ func getSourceDir() (string, error) {
 	}
 
 	return sourceDir, nil
-}
-
-func getSpecPath(sourceDir string) (string, error) {
-	spec := viper.GetString("spec")
-	if spec == "" {
-		return "", fmt.Errorf("invalid spec path: %s", spec)
-	}
-
-	return spec, nil
 }
 
 func getOutPath(buildDir string) string {

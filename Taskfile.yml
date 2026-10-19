@@ -8,5 +8,5 @@ tasks:
     cmds:
       - |
         go build \
-          -o dir2m4b \
+          -o bin/dir2m4b \
           .
